@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package com.parismon.service;
+
+import java.util.List;
+
+import com.parismon.model.ParismonUser;
+
+/**
+ * @author mjedli
+ *
+ */
+public interface ParismonUserService {
+
+	ParismonUser findById(int id);
+	
+	void saveUser(ParismonUser parismonUser);
+	
+	void deleteUserByEmail(String email);
+	
+	List<ParismonUser> findAllUser();
+	
+}
