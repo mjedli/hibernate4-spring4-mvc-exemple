@@ -8,13 +8,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Parismon Register User</title>
 
-<style>
-
-	.error {
-		color: #ff0000;
-	}
-</style>
-
 </head>
 
 <body>
@@ -23,20 +16,20 @@
  
     <form method="post" action="register">
     	<p>
-        	<label for="firstname">First Name :</label><br />
+        	<label for="firstname">First Name :</label>
         	<input type="text" name="firstname" id="firstname" tabindex="10" />
         </p>
         <p>
-        	<label for="lastname">Last Name :</label><br />
+        	<label for="lastname">Last Name :</label>
         	<input type="text" name="lastname" id="lastname" tabindex="10" />
         </p>
         <p> 	
-        	<label for="email">E-mail:</label><br />
+        	<label for="email">E-mail:</label>
         	<input type="text" name="email" id="email" tabindex="10" />
         	 </p>
         <p>
         	
-        	<label for="password">Password :</label><br />
+        	<label for="password">Password :</label>
         	<input type="text" name="password" id="password" tabindex="10" />
         	 </p>
         <p>

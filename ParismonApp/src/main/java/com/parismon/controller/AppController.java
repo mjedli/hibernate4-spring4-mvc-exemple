@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class AppController {
 
-	@RequestMapping(value = {""} , method = RequestMethod.GET)
+	@RequestMapping(value = {"/" , ""} , method = RequestMethod.GET)
 	public String goToRegisterPage(ModelMap modelMap) {
 		return "login"; 
 	}
