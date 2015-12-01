@@ -22,8 +22,7 @@ public class ParismonUserDaoImpl implements ParismonUserDao {
 	private SessionFactory sessionFactory;
 	
 	public ParismonUser findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return (ParismonUser) sessionFactory.getCurrentSession().get(ParismonUser.class, id);
 	}
 
 	public void saveUser(ParismonUser parismonUser) {
@@ -32,7 +31,6 @@ public class ParismonUserDaoImpl implements ParismonUserDao {
 
 	public void deleteUserByEmail(String email) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	public List<ParismonUser> findAllUser() {

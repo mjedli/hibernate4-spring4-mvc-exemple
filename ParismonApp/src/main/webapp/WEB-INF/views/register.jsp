@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
 
 <html>
 
@@ -16,25 +16,24 @@
  
     <form method="post" action="register">
     	<p>
-        	<label for="firstname">First Name :</label>
+        	<label>First Name :</label>
         	<input type="text" name="firstname" id="firstname" tabindex="10" />
         </p>
         <p>
-        	<label for="lastname">Last Name :</label>
+        	<label>Last Name :</label>
         	<input type="text" name="lastname" id="lastname" tabindex="10" />
         </p>
         <p> 	
-        	<label for="email">E-mail:</label>
+        	<label>E-mail:</label>
         	<input type="text" name="email" id="email" tabindex="10" />
         	 </p>
         <p>
-        	
-        	<label for="password">Password :</label>
+        	<label>Password :</label>
         	<input type="text" name="password" id="password" tabindex="10" />
         	 </p>
-        <p>
-        	<input type="submit" value="Valider" />	
-      	</p>
- 	</form>
+		<p>
+			<input type="submit" value="OK" />
+		</p>
+	</form>
 </body>
 </html>

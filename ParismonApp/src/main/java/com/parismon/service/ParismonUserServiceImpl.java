@@ -23,8 +23,7 @@ public class ParismonUserServiceImpl implements ParismonUserService {
 	private ParismonUserDao parismonUserDao;
 
 	public ParismonUser findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return parismonUserDao.findById(id);
 	}
 
 	public void saveUser(ParismonUser parismonUser) {

@@ -36,7 +36,7 @@ public class RegisterController {
 	
 	@RequestMapping(value = {""} , method = RequestMethod.POST,
 			params = {"lastname", "firstname", "email", "password"})
-	public String saveUserParismon(
+	public String saveParismonUser(
 			@RequestParam(value="lastname") String lastname,
 			@RequestParam(value="firstname") String firstname,
 			@RequestParam(value="email") String email,
