@@ -35,8 +35,7 @@ public class ParismonUserServiceImpl implements ParismonUserService {
 	}
 
 	public List<ParismonUser> findAllUser() {
-		// TODO Auto-generated method stub
-		return null;
+		return parismonUserDao.findAllUser();
 	}
 	
 }
