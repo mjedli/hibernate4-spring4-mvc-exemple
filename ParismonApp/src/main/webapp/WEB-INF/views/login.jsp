@@ -2,9 +2,15 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
 <html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="<c:url value='/static/css/app.css' />" rel="stylesheet"></link>
+<title>Bienvenue</title>
+</head>
+
 <body>
 	<h2>Hello World!</h2>
-</body>
 
 <a href="register">Register</a>
 <br>
@@ -25,5 +31,5 @@
             </tr>
         </c:forEach>
     </table>
-
+</body>
 </html>
