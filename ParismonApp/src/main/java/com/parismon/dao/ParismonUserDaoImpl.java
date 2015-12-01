@@ -5,6 +5,7 @@ package com.parismon.dao;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -30,7 +31,11 @@ public class ParismonUserDaoImpl implements ParismonUserDao {
 	}
 
 	public void deleteUserByEmail(String email) {
-		// TODO Auto-generated method stub
+		Query query = sessionFactory.getCurrentSession()
+				.createSQLQuery("delete from User where email = :email");
+        query.setString("email", email);
+        query.executeUpdate();
+		
 	}
 
 	public List<ParismonUser> findAllUser() {

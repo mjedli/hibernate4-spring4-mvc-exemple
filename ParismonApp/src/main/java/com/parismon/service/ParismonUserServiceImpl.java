@@ -31,8 +31,7 @@ public class ParismonUserServiceImpl implements ParismonUserService {
 	}
 
 	public void deleteUserByEmail(String email) {
-		// TODO Auto-generated method stub
-		
+		parismonUserDao.deleteUserByEmail(email);
 	}
 
 	public List<ParismonUser> findAllUser() {
