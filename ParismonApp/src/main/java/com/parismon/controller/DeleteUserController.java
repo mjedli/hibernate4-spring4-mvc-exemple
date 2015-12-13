@@ -7,12 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.parismon.model.ParismonUser;
 import com.parismon.service.ParismonUserService;
 
 /**
@@ -20,8 +18,8 @@ import com.parismon.service.ParismonUserService;
  *
  */
 @Controller
-@RequestMapping(value="/findUserById")
-public class findUserController {
+@RequestMapping(value="/deleteUserByEmail")
+public class DeleteUserController {
 
 	@Autowired
 	ParismonUserService service;
@@ -32,16 +30,15 @@ public class findUserController {
 	
 	@RequestMapping (value={""} , method=RequestMethod.GET)
 	public String findUserById(ModelMap modelMap) {
-		return "findUserById";
+		return "deleteUserByEmail";
 	}
 	
-	@RequestMapping (value={""} , method=RequestMethod.POST , params = {"id"})
+	@RequestMapping (value={""} , method=RequestMethod.POST , params = {"email"})
 	public String findUserById(
-			@RequestParam (value="id") int id, 
+			@RequestParam (value="email") String email, 
 			ModelMap modelMap) {
-		ParismonUser parismonUser = service.findById(id);
-		modelMap.addAttribute("parismonUser", parismonUser);
-		return "findUserById";
+		service.deleteUserByEmail(email);
+		return "deleteUserByEmail";
 	}
 	
 	
